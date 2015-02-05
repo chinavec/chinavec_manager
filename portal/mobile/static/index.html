@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<!--device-width值表示将内容扩展到屏幕的整个宽度,禁用缩放-->
+    <META name="apple-mobile-web-app-capable" content="yes">
+    <META name="apple-mobile-web-app-status-bar-style" content="black">
+    <META name="format-detection" content="telephone=no">	
+<title>大唐云媒体</title>
+<link href="/cloudm/portal/mobile/css/index.css" rel="stylesheet" type="text/css"><!--本系统开发的主页面css-->
+<link href="/cloudm/portal/mobile/css/common.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="cordova-2.6.0.js" charset="utf-8"></script>
+</head>
+<body>
+
+<style>
+	body {
+		background-image: url(img/stbg.jpg);
+		margin:0 auto;
+		background-repeat: repeat;
+		background-position: middle top;
+	}
+</style>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%" align="left" valign="top" background="img/bannerbg.jpg"><img src="img/banner-logo.jpg" alt="" width="87" height="92" /></td>
+    <td width="60%" align="center" valign="middle" background="img/bannerbg.jpg"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle" class="font-bai42">首页</td>
+        </tr>
+    </table></td>
+    <td width="20%" align="right" valign="top" background="img/bannerbg.jpg"><a href="setting.php"><img src="img/banner-sz.jpg" alt="" width="88" height="92" /></a></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="33%" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/recommend.php"><img src="img/tj.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/recommend.php">推荐</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/businessList.php?label=1"><img src="img/dy.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/businessList.php?label=1">电影</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="left" valign="middle"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/businessList.php?label=2"><img src="img/dsj.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/businessList.php?label=2">电视剧</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="33%" height="2" align="center" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="center" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="left" valign="middle" background="img/hx.jpg"></td>
+      </tr>
+      <tr>
+        <td width="33%" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/businessList.php?label=3"><img src="img/zy.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/businessList.php?label=3">综艺</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/businessList.php?label=4"><img src="img/yy.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/businessList.php?label=4">音乐</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="left" valign="middle"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/businessList.php?label=5"><img src="img/qt.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/businessList.php?label=5">其他</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="33%" height="2" align="center" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="center" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="left" valign="middle" background="img/hx.jpg"></td>
+      </tr>
+      <tr>
+        <td width="33%" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/liveTV.php"><img src="img/zb.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/liveTV.php">直播</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/groupJudge.php"><img src="img/jtzl.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/groupJudge.php">集团专栏</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="left" valign="middle"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/userInfo.php"><img src="img/grxx.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/userInfo.php">个人信息</a></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="33%" height="2" align="right" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="center" valign="middle" background="img/hx.jpg"></td>
+        <td width="33%" height="2" align="left" valign="middle" background="img/hx.jpg"></td>
+      </tr>
+      <tr>
+        <td width="33%" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/news.php"><img src="img/zhxx.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/news.php">综合栏目</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/mobile/search.php"><img src="img/ss.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/mobile/search.php">搜索</a></td>
+          </tr>
+        </table></td>
+        <td width="33%" align="left" valign="middle"><table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" background="img/anbg.jpg">
+          <tr>
+            <td align="center" valign="middle"><a href="/cloudm/portal/upload/forum.php"><img src="img/lt.png" alt="" width="75" height="75" /></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" class="font-hui26cu"><a href="/cloudm/portal/upload/forum.php">互动社区</a></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="87" colspan="3" align="center" valign="middle" background="img/footbg.jpg"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><img src="img/sy.png" alt="" width="53" height="45" /></td>
+      </tr>
+      <tr>
+        <td height="25" align="center" valign="middle"><span class="font-bai18">首页</span></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<!--<div>
+	<div style="width:100%;">	
+       
+		<ul class="indexList">
+			<li><a href="/cloudm/portal/mobile/recommend.php">推荐</a></li>
+            <li><a href="/cloudm/portal/mobile/liveTV.php">直播</a></li>
+             顺序读取label数据表，根据读取的结果顺序显示其中文名称
+				<li><a href="/cloudm/portal/mobile/businessList.php?label=1">电影</a></li><li><a href="/cloudm/portal/mobile/businessList.php?label=2">电视剧</a></li><li><a href="/cloudm/portal/mobile/businessList.php?label=3">综艺</a></li><li><a href="/cloudm/portal/mobile/businessList.php?label=4">音乐</a></li><li><a href="/cloudm/portal/mobile/businessList.php?label=5">其他</a></li>                   
+           <li><a href="/cloudm/portal/mobile/news.php">新闻</a></li>
+           <li><a href="/cloudm/portal/mobile/groupJudge.php">集团专栏</a></li>
+           <li><a href="/cloudm/portal/mobile/userInfo.php">个人信息</a></li>
+           <li><a href="/cloudm/portal/mobile/search.php">搜索</a></li>
+           <li><a href="/cloudm/portal/upload/forum.php">互动社区</a></li>            
+        </ul>
+	</div>
+</div>
+-->
+
+	<hr style="border:1px #999999; width:80px;" align="center"/>
+    

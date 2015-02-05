@@ -1,0 +1,46 @@
+/* CSS Document */
+.startLabel{
+	background-color: green;
+	padding: 5px 15px;
+	color: white;
+	font-weight: bold;
+}
+.stopLabel{
+	background-color: grey;
+	padding: 5px 15px;
+	color: white;
+	font-weight: bold;
+}
+.disable{
+	color: #999;
+}
+#sysinfo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+}
+#sysinfo span{
+	display: inline-block;
+	padding: 5px 15px;
+	background-color: #F90;
+	color: #FFF;
+	font-weight: bold;
+}
+#searchBox{
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+}
+#searchForm{
+	position: absolute;
+	right: 100px;
+	top: 3px;
+}
+#advancedSearch{
+	position: absolute;
+	right: 20px;
+	top: 3px;
+}
+

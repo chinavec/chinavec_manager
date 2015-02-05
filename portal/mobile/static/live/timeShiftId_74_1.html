@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<!--device-width值表示将内容扩展到屏幕的整个宽度,禁用缩放-->
+    <META name="apple-mobile-web-app-capable" content="yes">
+    <META name="apple-mobile-web-app-status-bar-style" content="black">
+    <META name="format-detection" content="telephone=no">	
+
+<title>云媒体平台</title>
+<link href="/cloudm/portal/mobile/css/index.css" rel="stylesheet" type="text/css"><!--使用了公用的css样式-->
+<link href="/cloudm/portal/mobile/css/livePlay.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="header">
+    	<div id="logoUser">
+		</div>
+        <div id="nav">
+        	<ul>
+            	<!--显示频道名称-->
+            	<li>包括</li>
+            </ul>
+        </div>
+    </div>
+   <div id="content">
+    	<div class="box">
+            	<li><br/>
+                	<img class="mediaCover left" width="80" src="/cloudm/portal/mobile/img/live/cctv1.png" />
+                    <div class="mediaInfo">
+                    	<h3 class="mediaTitle">中央电视台综合频道CCTV1</h3>
+                    </div>
+                    <div style="clear:both"></div>
+                </li>
+                <div style="clear:both"></div>
+        </div>
+        
+        <div style="margin-left:5%;width:90%">
+			<video width="100%" controls>
+            <!--***************时移节目播放*********************************************-->
+			 <source src="/cloudm/portal/mobile/<br />
+<b>Notice</b>:  Trying to get property of non-object in <b>D:\xampp\htdocs\cloudm\portal\mobile\timeShiftPlay.php</b> on line <b>76</b><br />
+" type="video/mp4"><!--HTML5播放标签-->
+				
+                <!--flash播放标签，video标签不支持时的备用方案-->
+                <embed
+					width="100%"
+					type="application/x-shockwave-flash"
+					id="player2"
+					name="player2"
+					src="swf/player.swf" 
+					allowscriptaccess="always" 
+					allowfullscreen="true"
+					flashvars="file=/cloudm/portal/mobile/<br />
+<b>Notice</b>:  Undefined variable: tmeShift in <b>D:\xampp\htdocs\cloudm\portal\mobile\timeShiftPlay.php</b> on line <b>87</b><br />
+<br />
+<b>Notice</b>:  Trying to get property of non-object in <b>D:\xampp\htdocs\cloudm\portal\mobile\timeShiftPlay.php</b> on line <b>87</b><br />
+" 
+				/>
+                
+			</video>
+            </div>
+          	
+            
+        <script language="javascript">
+			function tabs(n)
+			{
+				var len = 7;
+				for (var i = 1; i <= len; i++)//循环比较
+				{
+					document.getElementById('tab_a' + i).style.display = (i == n) ? 'block' : 'none';//节目单
+					document.getElementById('tab_' + i).className = (i == n) ? 'aaa' : 'none';//日期
+				}
+			}
+		</script>
+
+			<div class="programmeTab">
+		
+	<!---ul是时间排序-------------------------------------------------------->
+			<ul class="programmeMenu">
+				<li id="tab_1" class="aaa">
+					<span class="font3">
+					<a href="javascript:void(0)" onclick="tabs('1');" >06.05</a>
+					</span>
+				</li>
+ 								<li id="tab_2">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('2');" >
+                        	06.04                        </a>
+					</span>
+				</li>
+								<li id="tab_3">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('3');" >
+                        	06.03                        </a>
+					</span>
+				</li>
+								<li id="tab_4">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('4');" >
+                        	06.02                        </a>
+					</span>
+				</li>
+								<li id="tab_5">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('5');" >
+                        	06.01                        </a>
+					</span>
+				</li>
+								<li id="tab_6">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('6');" >
+                        	05.31                        </a>
+					</span>
+				</li>
+								<li id="tab_7">
+					<span class="font3">
+                        <a href="javascript:void(0)" onclick="tabs('7');" >
+                        	05.30                        </a>
+					</span>
+				</li>
+							</ul>
+			
+	<!---今天的节目单------------------------------------------------------------->
+		<div class="tab_b" id="tab_a1" style="display:block;">
+					<p style="padding:5px 0">
+				<span class="font1">
+                <img class="mediaCover left" width="17" src="/cloudm/portal/mobile/img/star.png" />
+					12:06-14:06					&nbsp;&nbsp;
+					包括				</span>
+				<span class="font2">&nbsp;看各地奇闻异事，秀丽风景，人文景观</span>
+		
+				<a href="/cloudm/portal/mobile/timeShiftPlay.php?timeShiftId=74&liveChannelId=1"><span class = "huifang">观看回放</span></a>            </p>
+            
+				</div>
+		
+	<!----之前6天的节目单------------------------------------------------------------->	
+				
+		<div class="tab_b" id="tab_a2" style="display:none;">
+				</div>
+		
+				
+		<div class="tab_b" id="tab_a3" style="display:none;">
+				</div>
+		
+				
+		<div class="tab_b" id="tab_a4" style="display:none;">
+				</div>
+		
+				
+		<div class="tab_b" id="tab_a5" style="display:none;">
+				</div>
+		
+				
+		<div class="tab_b" id="tab_a6" style="display:none;">
+					<p style="padding:5px 0">
+            <img class="mediaCover left" width="17" src="/cloudm/portal/mobile/img/star.png" />
+				<span class="font1">
+					21:05-21:05                    &nbsp;&nbsp;
+                    包括                </span>
+				<span class="font2">&nbsp;看各地奇闻异事，秀丽风景，人文景观</span>
+			
+				<a href="/cloudm/portal/mobile/timeShiftPlay.php?timeShiftId=73&liveChannelId=1">观看回放</a>			</p>
+					<p style="padding:5px 0">
+            <img class="mediaCover left" width="17" src="/cloudm/portal/mobile/img/star.png" />
+				<span class="font1">
+					19:05-21:05                    &nbsp;&nbsp;
+                    包括                </span>
+				<span class="font2">&nbsp;看各地奇闻异事，秀丽风景，人文景观</span>
+			
+				<a href="/cloudm/portal/mobile/timeShiftPlay.php?timeShiftId=71&liveChannelId=1">观看回放</a>			</p>
+					<p style="padding:5px 0">
+            <img class="mediaCover left" width="17" src="/cloudm/portal/mobile/img/star.png" />
+				<span class="font1">
+					17:05-19:05                    &nbsp;&nbsp;
+                    包括                </span>
+				<span class="font2">&nbsp;看各地奇闻异事，秀丽风景，人文景观</span>
+			
+				<a href="/cloudm/portal/mobile/timeShiftPlay.php?timeShiftId=72&liveChannelId=1">观看回放</a>			</p>
+				</div>
+		
+				
+		<div class="tab_b" id="tab_a7" style="display:none;">
+				</div>
+		
+				</div>
+<div style="clear:both"></div>
+</div>
+
+<!--<div id="footer">
+	<a href="index.php"><img width="50px" src="img/home.png"/></a>
+	<div>Copyright ©大唐移动通信设备有限公司</div>
+	<div style="width:100%;">
+		<ul class="functionList">
+			<li><a href="index.php" data-transition="slideup">
+				<img width="10px" src="img/home.png"/></a></li>
+			<li><a href="liveTV.php"><img width="10px" src="img/video.png"/></a></li>
+			<li><a href="#"><img width="10px" src="img/search.png"/></a></li>
+			<li><a href="news.php"><img width="10px" src="img/news.png"/></a></li>
+			<li><a href="userInfo.php"><img width="10px" src="img/group.png"/></a></li>
+		</ul>
+	</div>
+</div>-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td height="70" colspan="3" align="center" valign="middle" background="img/footbg.jpg">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><a href="index.php"><img src="img/sy.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="recommend.php"><img src="img/dyfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="search.php"><img src="img/ssfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="userInfo.php"><img src="img/grxxfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="setting.php"><img src="img/sz.png" alt="" width="45" height="40" /></a></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" class="font-bai18"><a href="index.php">首页</a></td>
+        <td align="center" valign="middle" class="font-hui18cu"><a href="recommend.php">推荐</a></td>
+        <td align="center" valign="middle" class="font-bai18"><a href="search.php">搜索</a></td>
+        <td height="20" align="center" valign="middle" class="font-bai18"><a href="userInfo.php">个人中心</a></td>
+        <td align="center" valign="middle" class="font-bai18"><a href="setting.php">设置</a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

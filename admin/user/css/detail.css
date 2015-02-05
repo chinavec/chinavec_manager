@@ -1,0 +1,17 @@
+/* CSS Document */
+.startLabel{
+	background-color: green;
+	padding: 5px 15px;
+	color: white;
+	font-weight: bold;
+}
+.stopLabel{
+	background-color: grey;
+	padding: 5px 15px;
+	color: white;
+	font-weight: bold;
+}
+.deleteLabel{
+	text-decoration: line-through;
+}
+

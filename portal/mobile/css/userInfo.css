@@ -1,0 +1,78 @@
+/* CSS Document */
+
+/* CSS Document */
+body, html {width:100%;height:100%;margin:0;padding:0}
+body{font:normal 12px Tahoma, Arial, sans-serif; color:#333; background-color:#FFF;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,table,td,th,img,div{margin:0;padding:0;border:0;}
+ul,ol{list-style-type:none;}
+li{list-style:none;}
+a{text-decoration:none;color:#000}
+a:hover{text-decoration:underline;}
+select,input,img,select{vertical-align:middle;}
+.clearit{clear:both;} 
+table{border-collapse:collapse;}
+.none {display:none;}
+.ab {position:absolute;}
+.left {float:left;display:inline;}
+.right {float:right;display:inline;}
+.tc {text-align:center;}
+.bold {font-weight:bold;}
+.ib{
+	display:inline-block;
+	*display:inline;
+	*vertical-align:middle;
+	zoom:1;
+}
+
+#header{
+	height: 80px;
+	width: 100%;
+	background: url(../img/header_bg.png) repeat-x;
+}
+#header #logoUser{
+	border-bottom: 1px solid #2B4F5E;
+	height: 35px;
+	line-height: 35px;
+	background: url(../img/logo.png) no-repeat left center;
+}
+#header #nav{
+	border-top: 1px solid #7698B1;
+}
+
+.userPicture{
+	margin: 2px;
+}
+.userInfo{
+	margin-left: 80px;
+	padding: 10px;
+}
+.userInfoTitle{
+	font-size: 16px;
+	font-weight: bold;
+	overflow: hidden;
+}
+.userInfo p{
+	font-size: 12px;
+	color: #333;
+	margin: 4px;
+}
+.infoList li{
+	position: relative;
+	border-bottom:1px groove;
+	}
+.infoPic{
+	margin: 1px;
+}
+.infoTitle{
+	font-size: 14px;
+	font-weight:500;
+	overflow:hidden;
+}
+
+#footer{
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background-color: #CECECE;
+	margin-bottom: 0;
+}

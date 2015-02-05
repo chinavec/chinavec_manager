@@ -1,0 +1,110 @@
+/* CSS Document */
+
+/* CSS Document */
+html,body{
+		margin:0;
+		padding:0;
+	}
+.huifang{
+	float: right;
+	font-size:12px;
+	color: #666;
+	}
+.zhengzaizhibo{
+	float: right;
+	font-size:12px;
+	font-weight:800;
+}
+.content{
+	border:1px solid #999999;
+	margin-bottom:20px;
+	margin-top:20px;
+	background-color:#FFFFFF;
+	-moz-border-radius: 12px;      /* Gecko 浏览器 边框圆角*/
+    -webkit-border-radius: 12px;   /* Webkit 浏览器 边框圆角*/
+    border-radius:12px; 
+}
+
+.playerHead{
+	margin:20px 0 20px 30px;
+}
+
+* {list-style-type:none; margin:0; padding:0;}
+.programmeTab{ 
+	margin:5px 5px 5px 5px;
+	width:97%;
+	overflow:hidden;
+	border:1px solid #999999;
+	float:left;
+}
+	
+.tab_b{
+	overflow:hidden;
+	margin:1px;
+}
+
+.programmeMenu{
+	overflow:hidden;
+}
+
+.programmeMenu li{
+	display:block;
+	float:left;
+	display: list-item;
+	text-align:center;
+	width:13.5%;
+	background:#58B url(img/labelTab.jpg) repeat-y;
+	line-height:32px;
+	border-bottom:1px #AACCEE solid;
+	border-right:1px #FFFFFF solid;
+	font-family:"Times New Roman", Times, serif ;
+	
+}
+
+.programmeMenu li a{
+	display:block;
+	}
+
+/*默认页面刷新后是显示最左边那框*/
+.programmeTab ul li.aaa
+{
+background: #FFFFFF;
+border-bottom:0px #FFFFFF solid;
+}
+
+.channelList{
+	margin:20px 0 30px 0;
+	float:left;
+	width:250px;
+	border:1px solid #999999;
+}
+
+.channelListTop{
+	color: #999;
+	background:#222 url(image/labelTab.jpg) repeat-y;
+	border: 1px solid #1a1a1a;
+	text-decoration: none;
+	display: block;
+	padding: 5px 18px;
+	margin: 0;
+}
+
+ul.channel{
+	text-decoration: none;
+	display: block;
+	padding: 5px 20px;
+	float:left;
+}
+
+ul.channel li{
+	display: block;
+	margin:8px 0;
+}
+
+.channelListPicture{
+	
+	margin:30px 30px 0px 50px;
+	float:left;
+	width:800px;
+	
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.searchBox{
+	border:1px solid #999999;
+	background-color:#FFFFFF;
+	-moz-border-radius: 10px;      /* Gecko 浏览器 边框圆角*/
+    -webkit-border-radius: 10px;   /* Webkit 浏览器 边框圆角*/
+    border-radius:10px; 
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <?php date_default_timezone_set("Asia/Shanghai");?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<!--device-width值表示将内容扩展到屏幕的整个宽度,禁用缩放-->
+    <META name="apple-mobile-web-app-capable" content="yes">
+    <META name="apple-mobile-web-app-status-bar-style" content="black">
+    <META name="format-detection" content="telephone=no">	
+<LINK href="css/common.css" rel="stylesheet" type="text/css">
+<LINK href="css/common1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="img/js/jquery.1.4.2-min.js"></script>
+<TITLE>意见反馈</TITLE>
+<style>
+body {
+	background-image: url(img/stbg.jpg);
+	margin:0 auto;
+	background-repeat: repeat;
+	background-position: left top;
+}
+.textarea{
+	margin-top:80px;
+}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	border-radius: .5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	border: solid 1px #c6c5c5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#a5a3a4), to(#7f7f80));
+	color: #FFF;
+}
+</style>
+</head>
+<body>
+<div align="center">
+<textarea name="content" rows="8" cols="40" class="textarea"></textarea>
+<br/>
+<input type="button" align="right" value="提交" class="button"/></div>
+</body>
+</html>

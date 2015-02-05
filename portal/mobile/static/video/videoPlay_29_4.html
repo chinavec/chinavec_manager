@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<!--device-width值表示将内容扩展到屏幕的整个宽度,禁用缩放-->
+    <META name="apple-mobile-web-app-capable" content="yes">
+    <META name="apple-mobile-web-app-status-bar-style" content="black">
+    <META name="format-detection" content="telephone=no">	
+<title>大唐云媒体平台</title>
+
+<script> 
+	var breakTime = null; //定义断点时间变量
+	
+	$(function(){
+		//alert($('#videoID').val());
+		var video = document.getElementById('video');
+		
+		//点击id为currentTime的按钮时，获取当前视频的播放时间，通过AJAX方式传递到currentTime.php文件 
+		$('#currentTime').click(function(){				//点击按钮时执行以下函数
+			$.post(
+					'currentTime.php',					//将数据发送给currentTime.php函数
+					{'currentTime': video.currentTime,	//传递过去的数据，有两个：当前视频观看时间和视频的唯一标示ID
+					 'videoID': $('#videoID').val()
+					},
+					function(data){						//返回值	
+						alert(data);
+					},
+					'html'								//返回值形式为html
+			);
+		});
+		
+		
+		//从getCurrentTime.php页面取回断点时间，用户点击ID为seek的按钮时，视频按断点时间开始播放
+		$.post(
+				'getCurrentTime.php',					//从getCurrentTime.php取数据
+				{'currentTime': video.currentTime,
+				 'videoID': $('#videoID').val()
+				},										//传递过去的数据：当前视频观看时间
+				function(data){							//返回值为断点时间
+					//console.log(data.videoID);
+					if(data.breakTime != undefined){	//如果breakTime已定义，将该值赋给breakTime变量
+						breakTime = data.breakTime;
+						video.play();
+						$('#seek').show().click(function(){		//当用户选择断点续播时，将视频的当前播放时间改写为读取的断点时间
+							video.currentTime = breakTime;
+						});	
+						console.log(data);
+					}
+				},
+				'json'									//返回值形式为json
+		);
+	});
+</script>
+
+</head>
+<body>
+	<div id="header">
+    	<div id="logoUser">
+		<p>爱过的你</p><br/>
+        </div>
+    </div>
+		
+        <div style="margin-left:5%;width:90%">
+        <!--HTML5的video标签-->
+			<video width="100%" controls id="video">
+			 	<source src="http://222.31.88.37/DFDFSGc8df32207265fe65f025888?fmt=x264_800_mp4?>" type="video/mp4">
+				<p>抱歉，您的浏览器不支持视频video标签</p>
+                
+             	<embed
+					width="100%"
+					type="application/x-shockwave-flash"
+					id="player2"
+					name="player2"
+					src="swf/player.swf" 
+					allowscriptaccess="always" 
+					allowfullscreen="true"
+					flashvars="file=/cloudm/portal/mobile/&image=/cloudm/portal/mobile/img/poster/aiguodeni.jpg" 
+				/>
+				
+			</video>
+            <input type="button" id="currentTime" value="保存此次播放时间" />
+            <input type="button" id="seek" value="从上次继续看" style="display:none" />
+            <input type="button" id="videoID" value="29" style="display:none" />
+    
+    	</div>  
+         
+		<p><span class="font1" >名称：</span>爱过的你        </p>
+		<p><span class="font1" >出品时间：</span></p>
+		<p><span class="font1" >  
+			词曲：           </span>
+		           </p>
+		<p><span class="font1" >
+			演唱：           </span>
+		           </p>
+		<p><span class="font1" >片长：&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+		<p><span class="font1" >语言：&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+
+			<div class="episode">
+				<span class="font1">歌曲</span><br/>
+                    <a href="/cloudm/portal/mobile/videoPlay.php?label=4&epgVideoId=<br />
+<b>Notice</b>:  Undefined variable: epgVideoId in <b>D:\xampp\htdocs\cloudm\portal\mobile\videoPlay.php</b> on line <b>256</b><br />
+;?>">
+                        <div class="play"></div>
+                    </a>
+			</div>
+			
+			
+			<div style="clear:both"></div>
+<!--<div id="footer">
+	<a href="index.php"><img width="50px" src="img/home.png"/></a>
+	<div>Copyright ©大唐移动通信设备有限公司</div>
+	<div style="width:100%;">
+		<ul class="functionList">
+			<li><a href="index.php" data-transition="slideup">
+				<img width="10px" src="img/home.png"/></a></li>
+			<li><a href="liveTV.php"><img width="10px" src="img/video.png"/></a></li>
+			<li><a href="#"><img width="10px" src="img/search.png"/></a></li>
+			<li><a href="news.php"><img width="10px" src="img/news.png"/></a></li>
+			<li><a href="userInfo.php"><img width="10px" src="img/group.png"/></a></li>
+		</ul>
+	</div>
+</div>-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td height="70" colspan="3" align="center" valign="middle" background="img/footbg.jpg">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><a href="index.php"><img src="img/sy.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="recommend.php"><img src="img/dyfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="search.php"><img src="img/ssfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="userInfo.php"><img src="img/grxxfoot.png" alt="" width="45" height="40" /></a></td>
+        <td align="center" valign="middle"><a href="setting.php"><img src="img/sz.png" alt="" width="45" height="40" /></a></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle" class="font-bai18"><a href="index.php">首页</a></td>
+        <td align="center" valign="middle" class="font-hui18cu"><a href="recommend.php">推荐</a></td>
+        <td align="center" valign="middle" class="font-bai18"><a href="search.php">搜索</a></td>
+        <td height="20" align="center" valign="middle" class="font-bai18"><a href="userInfo.php">个人中心</a></td>
+        <td align="center" valign="middle" class="font-bai18"><a href="setting.php">设置</a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
